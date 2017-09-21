@@ -2,7 +2,7 @@ version: "3"
 services:
 
     redis:
-        image: operation:82/redis:alpine
+        image: harbor-bj.devopshub.cn/docker-training/redis:alpine
         ports:
             - "6379"
         networks:
@@ -15,7 +15,7 @@ services:
             restart_policy:
                 condition: on-failure
     db:
-        image: operation:82/postgres:9.4
+        image: harbor-bj.devopshub.cn/docker-training/postgres:9.4
         volumes:
             - db-data:/var/lib/postgresql/data
         networks:
